@@ -11,8 +11,9 @@ QT       += core gui sql charts
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 win32 {
-    INCLUDEPATH += $$quote(C:\Program Files\MySQL\MySQL Connector C 6.1\include)
-    LIBS+= -L$$quote(C:\Program Files\MySQL\MySQL Connector C 6.1\lib) -llibmysql
+
+    INCLUDEPATH += $$quote(C:\Program Files (x86)\MySQL\MySQL Connector C 6.1\include)
+    LIBS+= -L$$quote(C:\Program Files (x86)\MySQL\MySQL Connector C 6.1\lib) -llibmysql
 }
 
 TARGET = testwidgets

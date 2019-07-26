@@ -246,7 +246,134 @@ color: white;</string>
        </layout>
       </widget>
       <widget class="QWidget" name="dashboard">
-       <layout class="QVBoxLayout" name="verticalLayout_15"/>
+       <layout class="QVBoxLayout" name="verticalLayout_15">
+        <item>
+         <layout class="QVBoxLayout" name="vertical">
+          <item>
+           <widget class="QListWidget" name="listWidget">
+            <item>
+             <property name="text">
+              <string>new item</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>new item</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>new item</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>new item</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTreeWidget" name="treeWidget">
+            <column>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </column>
+            <item>
+             <property name="text">
+              <string>new item</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>new subitem</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>new subitem</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>new item</string>
+               </property>
+              </item>
+             </item>
+            </item>
+            <item>
+             <property name="text">
+              <string>new item</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>new item</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>new item</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>new item</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>new subitem</string>
+               </property>
+              </item>
+             </item>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="tableWidget">
+            <row>
+             <property name="text">
+              <string>new row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>new row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>new row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>new row</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>new column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>new column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>new column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>new column</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -258,7 +385,7 @@ color: white;</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

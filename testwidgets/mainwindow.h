@@ -8,7 +8,9 @@
 #include<QtSql/QSqlDatabase>
 #include<QtSql/QSqlQuery>
 #endif
-
+#include <QMainWindow>
+#include <QDebug>
+#include <QListWidgetItem>
 #include "testcharts.h"
 #ifdef linux
 #include<QtSql>
@@ -32,6 +34,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    //void keyPressEvent(QKeyEvent * event);
 
 private slots:
     void on_loginButton_clicked();
