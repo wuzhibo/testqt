@@ -3,9 +3,18 @@
 
 #include <QMainWindow>
 
+#ifdef WIN32
 #include<Qtsql/QSql>
 #include<QtSql/QSqlDatabase>
 #include<QtSql/QSqlQuery>
+#endif
+
+#include "testcharts.h"
+#ifdef linux
+#include<QtSql>
+#include<QSqlDatabase>
+#include<QSqlQuery>
+#endif
 
 #include<QtDebug>
 #include<QMessageBox>
@@ -27,9 +36,12 @@ public:
 private slots:
     void on_loginButton_clicked();
 
+    void on_stackedWidget_currentChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
+    testcharts *charts;
 };
 
 #endif // MAINWINDOW_H

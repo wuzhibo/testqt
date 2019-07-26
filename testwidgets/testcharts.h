@@ -3,6 +3,11 @@
 
 #include <QWidget>
 
+#include<QtCharts>
+#include<QChartView>
+#include<QBarSet>
+#include<QBarSeries>
+
 namespace Ui {
 class testcharts;
 }

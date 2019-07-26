@@ -8,8 +8,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+//    charts = new testcharts(this);
+//    ui->->addWidget(charts);
     db = QSqlDatabase::addDatabase("QMYSQL");
+#ifdef WIN32
     db.setHostName("192.168.207.134");
+#else
+    db.setHostName("127.0.0.1");
+#endif
     db.setPort(3306);
     db.setDatabaseName("testwidget");
     db.setUserName("root");
@@ -43,7 +49,9 @@ void MainWindow::on_loginButton_clicked()
     {
         if(query.size() > 0)
         {
-            QMessageBox::information(this, "Login success.", "You have successfully logged in!");
+            // add next page to stackedWidget
+            ui->stackedWidget->setCurrentWidget(ui->dashboard);
+            //QMessageBox::information(this, "Login success.", "You have successfully logged in!");
         }
         else
         {
@@ -56,4 +64,12 @@ void MainWindow::on_loginButton_clicked()
 
 
 
+}
+
+void MainWindow::on_stackedWidget_currentChanged(int arg1)
+{
+    if(arg1 == 1)
+    {
+        qDebug() << "arg1 === 1";
+    }
 }
