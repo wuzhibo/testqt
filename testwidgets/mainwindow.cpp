@@ -56,13 +56,40 @@ void MainWindow::on_loginButton_clicked()
     {
         if(query.size() > 0)
         {
-            // add next page to stackedWidget
+
+            // 更多有关 list tree table 的例子  https://doc.qt.io/qt-5/examples-itemviews.html
+            // 添加 listwidget 的子选项
             ui->listWidget->addItem("My Test Item");
             QListWidgetItem *listitem = new QListWidgetItem;
             listitem->setText("My Second Item");
             listitem->setData(100, 1000);
             qDebug() << listitem->data(100);
             ui->listWidget->addItem(listitem);
+
+            // 添加 treewidget 的子选项
+            QTreeWidgetItem *treeItem = new QTreeWidgetItem;
+            treeItem->setText(0, "My Test Item");
+            ui->treeWidget->addTopLevelItem(treeItem);
+
+            QTreeWidgetItem *treeItme2 = new QTreeWidgetItem;
+            treeItme2->setText(0, "My Test Subitem");
+            treeItem->addChild(treeItme2);
+
+            // 添加tablewidget的子选项
+            QTableWidgetItem *tableItem = new QTableWidgetItem;
+            tableItem->setText("Testing1");
+            ui->tableWidget->setItem(0, 0, tableItem);
+
+            QTableWidgetItem *tableItem2 = new QTableWidgetItem;
+            tableItem2->setText("Testing2");
+            ui->tableWidget->setItem(1, 2, tableItem2);
+
+            QMessageBox::information(this, "欢迎您来", "您以来到操作界面请进入观看");
+            QMessageBox::question(this, "您的登录有问题!", "看看您的用户名和密码是不是不正确!");
+            QMessageBox::warning(this, "设置异常!", "设置异常");
+            QMessageBox::critical(this, "严重问题!", "要爆炸了房价");
+
+            // 设置当前显示为dashboard
             ui->stackedWidget->setCurrentWidget(ui->dashboard);
             //ui->stackedWidget->setCurrentWidget(charts);
             //QMessageBox::information(this, "Login success.", "You have successfully logged in!");
