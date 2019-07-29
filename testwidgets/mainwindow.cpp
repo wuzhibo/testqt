@@ -8,8 +8,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    // 添加 charts 到主界面系统
     charts = new testcharts(this);
     ui->stackedWidget->addWidget(charts);
+
+    // 添加 image 到主界面系统
+    image = new testimage(this);
+    ui->stackedWidget->addWidget(image);
+
+
     db = QSqlDatabase::addDatabase("QMYSQL");
 #ifdef WIN32
     db.setHostName("192.168.207.134");
@@ -84,14 +91,24 @@ void MainWindow::on_loginButton_clicked()
             tableItem2->setText("Testing2");
             ui->tableWidget->setItem(1, 2, tableItem2);
 
+            // 更多有关 QMessageBox 的例子 http://doc.qt.io/qt-5/qdialog.html
             QMessageBox::information(this, "欢迎您来", "您以来到操作界面请进入观看");
-            QMessageBox::question(this, "您的登录有问题!", "看看您的用户名和密码是不是不正确!");
+            QMessageBox::question(this, "您的登录有问题!", "看看您的用户名和密码是不是不正确!", QMessageBox::Ignore, QMessageBox::Yes);
             QMessageBox::warning(this, "设置异常!", "设置异常");
             QMessageBox::critical(this, "严重问题!", "要爆炸了房价");
 
+            if(QMessageBox::question(this, "你选择我还是她", "你选择我还是她") == QMessageBox::Yes)
+            {
+                QMessageBox::warning(this, "Yes", "You have pressed Yes!");
+            }else
+            {
+                QMessageBox::warning(this, "No", "You have pressed No!");
+            }
+
+
             // 设置当前显示为dashboard
-            ui->stackedWidget->setCurrentWidget(ui->dashboard);
-            //ui->stackedWidget->setCurrentWidget(charts);
+            //ui->stackedWidget->setCurrentWidget(ui->dashboard);
+            ui->stackedWidget->setCurrentWidget(image);
             //QMessageBox::information(this, "Login success.", "You have successfully logged in!");
         }
         else

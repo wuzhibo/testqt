@@ -12,6 +12,7 @@
 #include <QDebug>
 #include <QListWidgetItem>
 #include "testcharts.h"
+#include "testimage.h"
 #ifdef linux
 #include<QtSql>
 #include<QSqlDatabase>
@@ -45,6 +46,8 @@ private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
     testcharts *charts;
+    testimage *image;
+
 };
 
 #endif // MAINWINDOW_H

@@ -22,13 +22,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    testcharts.cpp
+    testcharts.cpp \
+    testimage.cpp
 
 HEADERS  += mainwindow.h \
-    testcharts.h
+    testcharts.h \
+    testimage.h
 
 FORMS    += mainwindow.ui \
-    testcharts.ui
+    testcharts.ui \
+    testimage.ui
 
 RESOURCES += \
     images.qrc
