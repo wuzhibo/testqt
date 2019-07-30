@@ -6,6 +6,9 @@ testimage::testimage(QWidget *parent) :
     ui(new Ui::testimage)
 {
     ui->setupUi(this);
+    canDraw = false;
+    pix = NULL;
+
 }
 
 testimage::~testimage()
@@ -54,8 +57,7 @@ void testimage::paintImage(QString fileName, int x, int y)
     if(!fileName.isEmpty())
     {
         painter.begin(&saveIamge);
-    }else
-    {
+    }else{
         painter.begin(this);
     }
     if(!pix->isNull())
@@ -71,4 +73,33 @@ void testimage::paintImage(QString fileName, int x, int y)
         saveIamge.save(fileName);
         QMessageBox::information(this, "Success", "Image has been successfully saved!");
     }
+}
+
+void testimage::on_pushButton_2_clicked()
+{
+    if(canDraw)
+    {
+        if(!pix->isNull())
+        {
+            paintImage(QCoreApplication::applicationDirPath() + "/image.jpg", 0, 0);
+        }
+    }
+}
+
+void testimage::on_scale_valueChanged(int value)
+{
+    drawSize = imageSize * value / 100;
+    update();
+}
+
+void testimage::on_horizontal_valueChanged(int value)
+{
+    drawPos.setX(value * drawSize.width() / 100 * 0.5);
+    update();
+}
+
+void testimage::on_vertical_valueChanged(int value)
+{
+    drawPos.setY(value * drawSize.height() / 100 * 0.5);
+    update();
 }

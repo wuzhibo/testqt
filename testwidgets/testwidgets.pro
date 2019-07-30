@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql charts
+QT       += core gui sql charts network
 
 
 
@@ -23,11 +23,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     testcharts.cpp \
-    testimage.cpp
+    testimage.cpp \
+    service.cpp
 
 HEADERS  += mainwindow.h \
     testcharts.h \
-    testimage.h
+    testimage.h \
+    service.h
 
 FORMS    += mainwindow.ui \
     testcharts.ui \

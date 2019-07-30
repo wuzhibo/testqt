@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>302</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -86,7 +86,7 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QSlider" name="horizontalSlider">
+      <widget class="QSlider" name="scale">
        <property name="minimum">
         <number>1</number>
        </property>
@@ -105,7 +105,7 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QSlider" name="horizontalSlider_2">
+      <widget class="QSlider" name="horizontal">
        <property name="minimum">
         <number>1</number>
        </property>
@@ -121,7 +121,7 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QSlider" name="horizontalSlider_3">
+      <widget class="QSlider" name="vertical">
        <property name="minimum">
         <number>1</number>
        </property>

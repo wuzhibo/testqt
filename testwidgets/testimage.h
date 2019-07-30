@@ -22,6 +22,14 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_scale_valueChanged(int value);
+
+    void on_horizontal_valueChanged(int value);
+
+    void on_vertical_valueChanged(int value);
+
 private:
     Ui::testimage *ui;
     bool canDraw;
