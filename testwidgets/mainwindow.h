@@ -3,21 +3,15 @@
 
 #include <QMainWindow>
 
-#ifdef WIN32
-#include<Qtsql/QSql>
-#include<QtSql/QSqlDatabase>
-#include<QtSql/QSqlQuery>
-#endif
+
 #include <QMainWindow>
 #include <QDebug>
 #include <QListWidgetItem>
 #include "testcharts.h"
 #include "testimage.h"
-#ifdef linux
 #include<QtSql>
 #include<QSqlDatabase>
 #include<QSqlQuery>
-#endif
 
 #include<QtDebug>
 #include<QMessageBox>
