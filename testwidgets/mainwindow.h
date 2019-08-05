@@ -9,6 +9,8 @@
 #include <QListWidgetItem>
 #include "testcharts.h"
 #include "testimage.h"
+#include "service.h"
+#include "message.h"
 #include<QtSql>
 #include<QSqlDatabase>
 #include<QSqlQuery>
@@ -16,6 +18,9 @@
 #include<QtDebug>
 #include<QMessageBox>
 #include<QSqlError>
+#include<QMenuBar>
+#include<QMenu>
+#include<QMetaEnum>
 
 
 namespace Ui {
@@ -36,11 +41,15 @@ private slots:
 
     void on_stackedWidget_currentChanged(int arg1);
 
+    void on_MainWindow_iconSizeChanged(const QSize &iconSize);
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
     testcharts *charts;
     testimage *image;
+    service *server;
+    message *tmessage;
 
 };
 

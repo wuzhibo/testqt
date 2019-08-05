@@ -67,8 +67,27 @@ void service::socketStateChanged(QAbstractSocket::SocketState state)
 
     if(state == QAbstractSocket::UnconnectedState)
     {
-        desc = "The socket is ";
+        desc = "The socket is not connected.";
+    } else if(state == QAbstractSocket::HostLookupState)
+    {
+        desc = "The socket is performing a host name lookup.";
+    } else if(state == QAbstractSocket::ConnectingState)
+    {
+        desc = "The socket has started establishing a connection.";
+    }else if(state == QAbstractSocket::ConnectedState)
+    {
+        desc = "A connecction is established.";
+    }else if(state == QAbstractSocket::BoundState)
+    {
+        desc = "The socket is bound to an address and port.";
+    }else if(state == QAbstractSocket::ListeningState)
+    {
+        desc = "For internal use only.";
+    } else if(state == QAbstractSocket::ClosingState)
+    {
+        desc = "The socket is about to close (data may still be waiting to be written).";
     }
+    qDebug() << "Socket state changed (" + socketIpAddress + ":" + QString::number(port) + "): " + desc;
 
 
 }

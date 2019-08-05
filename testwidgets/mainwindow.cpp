@@ -8,6 +8,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    // 添加对话框。
+    tmessage = new message();
+    ui->stackedWidget->addWidget(tmessage);
+    // 添加server 程序。
+    server = new service();
+    server->startServer();
+
     // 添加 charts 到主界面系统
     charts = new testcharts(this);
     ui->stackedWidget->addWidget(charts);
@@ -26,13 +34,14 @@ MainWindow::MainWindow(QWidget *parent) :
     db.setPort(3306);
     db.setDatabaseName("testwidget");
     db.setUserName("root");
-    db.setPassword("wuzhibo");
+    //db.setPassword("wuzhibo");
 
     if(db.open())
     {
         qDebug() << "Connected!";
     }else
     {
+        QMessageBox::question(this, "您的登录有问题!", "看看您的用户名和密码是不是不正确!", QMessageBox::Ignore, QMessageBox::Yes);
         qDebug() << "Failed to connect";
     }
 
@@ -92,23 +101,24 @@ void MainWindow::on_loginButton_clicked()
             ui->tableWidget->setItem(1, 2, tableItem2);
 
             // 更多有关 QMessageBox 的例子 http://doc.qt.io/qt-5/qdialog.html
-            QMessageBox::information(this, "欢迎您来", "您以来到操作界面请进入观看");
-            QMessageBox::question(this, "您的登录有问题!", "看看您的用户名和密码是不是不正确!", QMessageBox::Ignore, QMessageBox::Yes);
-            QMessageBox::warning(this, "设置异常!", "设置异常");
-            QMessageBox::critical(this, "严重问题!", "要爆炸了房价");
+//            QMessageBox::information(this, "欢迎您来", "您以来到操作界面请进入观看");
+//            QMessageBox::question(this, "您的登录有问题!", "看看您的用户名和密码是不是不正确!", QMessageBox::Ignore, QMessageBox::Yes);
+//            QMessageBox::warning(this, "设置异常!", "设置异常");
+//            QMessageBox::critical(this, "严重问题!", "要爆炸了房价");
 
-            if(QMessageBox::question(this, "你选择我还是她", "你选择我还是她") == QMessageBox::Yes)
-            {
-                QMessageBox::warning(this, "Yes", "You have pressed Yes!");
-            }else
-            {
-                QMessageBox::warning(this, "No", "You have pressed No!");
-            }
+//            if(QMessageBox::question(this, "你选择我还是她", "你选择我还是她") == QMessageBox::Yes)
+//            {
+//                QMessageBox::warning(this, "Yes", "You have pressed Yes!");
+//            }else
+//            {
+//                QMessageBox::warning(this, "No", "You have pressed No!");
+//            }
 
 
             // 设置当前显示为dashboard
             //ui->stackedWidget->setCurrentWidget(ui->dashboard);
-            ui->stackedWidget->setCurrentWidget(image);
+            //ui->stackedWidget->setCurrentWidget(image);
+            ui->stackedWidget->setCurrentWidget(tmessage);
             //QMessageBox::information(this, "Login success.", "You have successfully logged in!");
         }
         else
@@ -133,3 +143,8 @@ void MainWindow::on_stackedWidget_currentChanged(int arg1)
 }
 
 
+
+void MainWindow::on_MainWindow_iconSizeChanged(const QSize &iconSize)
+{
+    return;
+}
