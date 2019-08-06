@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
+<ui version="4.9">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
   <property name="enabled">
@@ -385,33 +385,7 @@ color: white;</string>
     </item>
    </layout>
   </widget>
-  <action name="actionwuhib">
-   <property name="text">
-    <string>wuhib</string>
-   </property>
-  </action>
-  <action name="actionwuzhibo">
-   <property name="text">
-    <string>wuzhibo</string>
-   </property>
-  </action>
-   </attribute>
-  </widget>
-  <action name="actionwuzhibi">
-   <property name="text">
-    <string>wuzhibi</string>
-   </property>
-  </action>
-  <action name="actionwuzhibi_2">
-   <property name="text">
-    <string>wuzhibi</string>
-   </property>
-  </action>
-  <action name="actionwuzhibo">
-   <property name="text">
-    <string>wuzhibo</string>
-   </property>
-  </action>
+
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
