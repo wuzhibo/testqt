@@ -385,22 +385,6 @@ color: white;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>803</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuwww">
-    <property name="title">
-     <string>www</string>
-    </property>
-   </widget>
-   <addaction name="menuwww"/>
-  </widget>
   <action name="actionwuhib">
    <property name="text">
     <string>wuhib</string>
