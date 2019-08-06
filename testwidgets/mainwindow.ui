@@ -388,6 +388,9 @@ color: white;</string>
      <height>23</height>
     </rect>
    </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -398,6 +401,32 @@ color: white;</string>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionwuzhibi">
+   <property name="text">
+    <string>wuzhibi</string>
+   </property>
+  </action>
+  <action name="actionwuzhibi_2">
+   <property name="text">
+    <string>wuzhibi</string>
+   </property>
+  </action>
+  <action name="actionwuzhibo">
+   <property name="text">
+    <string>wuzhibo</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
