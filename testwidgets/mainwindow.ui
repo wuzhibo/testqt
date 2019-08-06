@@ -9,9 +9,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>803</width>
     <height>600</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <stylestrategy>PreferAntialias</stylestrategy>
+    <kerning>true</kerning>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -75,7 +81,7 @@ border-image: url(:/images/timg.jpg); }</string>
            <enum>QLayout::SetDefaultConstraint</enum>
           </property>
           <property name="topMargin">
-           <number>20</number>
+           <number>0</number>
           </property>
           <property name="bottomMargin">
            <number>0</number>
@@ -184,7 +190,7 @@ background-color: white; }</string>
            <number>0</number>
           </property>
           <item>
-           <spacer name="horizontalSpacer_2">
+           <spacer name="horizontalSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -200,7 +206,7 @@ background-color: white; }</string>
            <widget class="QPushButton" name="loginButton">
             <property name="minimumSize">
              <size>
-              <width>270</width>
+              <width>260</width>
               <height>35</height>
              </size>
             </property>
@@ -216,7 +222,7 @@ color: white;</string>
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer">
+           <spacer name="horizontalSpacer_2">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -384,32 +390,27 @@ color: white;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>23</height>
+     <width>803</width>
+     <height>22</height>
     </rect>
    </property>
-   <property name="nativeMenuBar">
-    <bool>false</bool>
-   </property>
+   <widget class="QMenu" name="menuwww">
+    <property name="title">
+     <string>www</string>
+    </property>
+   </widget>
+   <addaction name="menuwww"/>
   </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
-  <widget class="QToolBar" name="toolBar">
-   <property name="windowTitle">
-    <string>toolBar</string>
+  <action name="actionwuhib">
+   <property name="text">
+    <string>wuhib</string>
    </property>
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
+  </action>
+  <action name="actionwuzhibo">
+   <property name="text">
+    <string>wuzhibo</string>
+   </property>
+  </action>
    </attribute>
   </widget>
   <action name="actionwuzhibi">
@@ -429,6 +430,14 @@ color: white;</string>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>passwordinput</tabstop>
+  <tabstop>userinput</tabstop>
+  <tabstop>listWidget</tabstop>
+  <tabstop>loginButton</tabstop>
+  <tabstop>treeWidget</tabstop>
+  <tabstop>tableWidget</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

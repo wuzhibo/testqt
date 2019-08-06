@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql charts network
+QT       += core gui sql charts network svg
+
 
 
 
@@ -24,16 +25,25 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     testcharts.cpp \
     testimage.cpp \
-    service.cpp
+    service.cpp \
+    message.cpp \
+    testmenu.cpp \
+    testmain.cpp
 
 HEADERS  += mainwindow.h \
     testcharts.h \
     testimage.h \
-    service.h
+    service.h \
+    message.h \
+    testmenu.h \
+    testmain.h
 
 FORMS    += mainwindow.ui \
     testcharts.ui \
-    testimage.ui
+    testimage.ui \
+    message.ui \
+    testmenu.ui \
+    testmain.ui
 
 RESOURCES += \
     images.qrc
